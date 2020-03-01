@@ -4,13 +4,6 @@
 DOTFILES_DIR="$( cd "$(dirname "$0")" ; pwd -P )"
 GITCONFIG_LINK="${DOTFILES_DIR}/git/.gitconfig_link"
 
-# Remove existing dot files
-echo "Removing existing dot files..."
-rm -rf ~/.vim_runtime
-rm -rf ~/.vimrc
-rm -rf ~/.tmux.conf
-rm -rf ~/.gitconfig
-
 # Check for existing gitconfig link file
 if [[ -f "$GITCONFIG_LINK" ]]; then
     echo "Using existing generated .gitconfig"
@@ -21,6 +14,13 @@ else
     sed "s|REPLACE_NAME|${name}|g" ${DOTFILES_DIR}/git/.gitconfig > $GITCONFIG_LINK
     sed -i "s|REPLACE_EMAIL|${email}|g" $GITCONFIG_LINK
 fi
+
+# Remove existing dot files
+echo "Removing existing dot files..."
+rm -rf ~/.vim_runtime
+rm -rf ~/.vimrc
+rm -rf ~/.tmux.conf
+rm -rf ~/.gitconfig
 
 # Install amix/vimrc - https://github.com/amix/vimrc
 echo "Installing amix/vimrc..."
