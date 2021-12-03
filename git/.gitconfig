@@ -5,3 +5,7 @@
 	editor = vim
 [alias]
 	gr = log --all --decorate --oneline --graph
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git://"]
+	insteadOf = https://
