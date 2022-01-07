@@ -10,10 +10,10 @@ if [[ -f "${ENV_CONFIG}" ]]; then
     echo "Using existing env config"
     source ${ENV_CONFIG}
 else
-    read -p "Enter name: " name
-    read -p "Enter email: " email
-    echo "NAME=\"${name}\"" > ${ENV_CONFIG}
-    echo "EMAIL=\"${email}\"" >> ${ENV_CONFIG}
+    read -p "Enter name: " NAME
+    read -p "Enter email: " EMAIL
+    echo "NAME=\"${NAME}\"" > ${ENV_CONFIG}
+    echo "EMAIL=\"${EMAIL}\"" >> ${ENV_CONFIG}
 fi
 
 echo "Removing existing dot files"
