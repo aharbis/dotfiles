@@ -7,6 +7,7 @@ DOTFILES_DIR="$( cd "$(dirname "$0")" ; pwd -P )"
 echo "Removing existing dot files..."
 rm -rf ~/.vim_runtime
 rm -rf ~/.vimrc
+rm -rf ~/.tmux.conf
 
 # Install amix/vimrc - https://github.com/amix/vimrc
 echo "Installing amix/vimrc..."
@@ -16,5 +17,9 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 # Add custom config to amix/vimrc
 echo "Applying custom config to amix/vimrc..."
 ln -sf ${DOTFILES_DIR}/vim/my_configs.vim ~/.vim_runtime/my_configs.vim
+
+# Create symlinks in the home directory
+echo "Creating symlinks..."
+ln -sf ${DOTFILES_DIR}/tmux/.tmux.conf ~/.tmux.conf
 
 echo "Installation complete!"
