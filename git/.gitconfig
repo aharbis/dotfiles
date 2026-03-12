@@ -1,0 +1,7 @@
+[user]
+	name = Aidan Harbison
+	email = REPLACE_EMAIL
+[core]
+	editor = vim
+[alias]
+	gr = log --all --decorate --oneline --graph
