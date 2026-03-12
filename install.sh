@@ -8,7 +8,7 @@ GITCONFIG_LINK="${DOTFILES_DIR}/git/.gitconfig_link"
 if [[ -f "$GITCONFIG_LINK" ]]; then
     echo "Using existing generated .gitconfig"
 else
-    # prompt for email to use in .gitconfig
+    # prompt for name and email to use in .gitconfig
     read -p "Enter name for .gitconfig: " name
     read -p "Enter email for .gitconfig: " email
     sed "s|REPLACE_NAME|${name}|g" ${DOTFILES_DIR}/git/.gitconfig > $GITCONFIG_LINK
