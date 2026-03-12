@@ -12,7 +12,6 @@ If this is the first time the script is being run, it will prompt for the name a
 
 ```
 $ ./install.sh
-Removing existing dot files...
 Enter name for .gitconfig: John Doe
 Enter email for .gitconfig: john@example.com
 ```
