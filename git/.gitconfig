@@ -3,6 +3,9 @@
 	email = REPLACE_EMAIL
 [core]
 	editor = vim
+[push]
+    default = simple
+    autoSetupRemote = true
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [url "git://"]
