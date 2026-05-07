@@ -1,16 +1,18 @@
 [user]
-	name = REPLACE_NAME
-	email = REPLACE_EMAIL
+    name = REPLACE_NAME
+    email = REPLACE_EMAIL
 [core]
-	editor = vim
+    editor = vim
+[init]
+    defaultBranch = main
 [push]
     default = simple
     autoSetupRemote = true
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
 [url "git://"]
-	insteadOf = https://
+    insteadOf = https://
 [alias]
-	gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
-	gr = log --all --decorate --oneline --graph
-	fa = fetch --all --prune
+    gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
+    gr = log --all --decorate --oneline --graph
+    fa = fetch --all --prune
